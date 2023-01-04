@@ -1,0 +1,125 @@
+.pacific {
+
+   .pacific-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      margin: 0 auto;
+      padding: 100px 0;
+      
+      .pacific-txt {
+         margin-bottom: 40px;
+
+         h3 {
+            @include titre-h3;
+         }
+         h2 {
+            @include titre-h2;
+         }
+         p {
+            @include para;
+         }
+      }
+      .pacific-img {
+         background: url(../../img/Island-portrait.jpg) no-repeat center/cover;
+         width: 100%;
+         height: 35vh;
+      }
+   }
+}
+@media screen and (min-width:765px) {
+   .pacific {
+      margin-top: 100px;
+
+      .pacific-wrapper {
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+         width: 90%;
+         height: 100vh;
+
+            .pacific-txt {
+               width: 35%;
+               
+               h2 {
+                  font-size: 45px;
+               }
+               p {
+                  font-size: 20px;
+                  margin-right: 50px;
+                  line-height: 30px;
+               }
+            }
+            .pacific-img {
+               height: 80vh;
+               width: 40%;
+               justify-self: flex-start;
+               margin-right: 75px;
+               box-shadow: 75px 75px 0 rgb(207, 207, 207);
+            }
+      }
+   }  
+}
+
+.residences {
+
+   .residences-wrapper {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+         .residences-img {
+            background: url(../../img/Makena_Andy-Carlson.jpg) no-repeat center/cover;
+            width: 100%;
+            height: 35vh;
+         }
+         .residences-txt {
+
+            h3 {
+               @include titre-h3;
+               margin-top: 50px;
+            }
+            h2 {
+               @include titre-h2
+            }
+            p {
+               @include para;
+               margin-bottom: 50px;
+            }
+         }
+   }
+}
+@media screen and (min-width:765px) {
+   .residences {
+      margin-top: 100px;
+      .residences-wrapper {
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+         width: 90%;
+         height: 100vh;
+
+         .residences-txt {
+            width: 35%;
+            
+            h2 {
+               font-size: 45px;
+            }
+            p {
+               font-size: 20px;
+               margin-right: 50px;
+               line-height: 30px;
+            }
+         }
+         .residences-img {
+            height: 50vh;
+            width: 50%;
+         }
+      }
+   }
+}

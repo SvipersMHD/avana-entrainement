@@ -1,0 +1,64 @@
+.welcome {
+   height: 90vh;
+   background: url(../../img/palm-bg.jpg) no-repeat center/cover;
+   
+   .welcome-wrapper {
+      height: 100%;
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+      .welcome-img {
+         background: url(../../img/surfer-overlay.jpg) no-repeat center/cover;
+         height: 25vh;
+         width: 100%;
+      }
+      .welcome-txt {
+         background-color: #fff;
+         padding: 55px 30px 65px;
+         
+         h3 {
+            @include titre-h3;
+         }
+         h2 {
+            @include titre-h2;
+            margin-bottom: 50px;
+         }
+      }
+   } 
+}
+
+@media screen and (min-width:765px) {
+   .welcome {
+   height: 100vh;
+      
+      
+      .welcome-wrapper {
+         flex-direction: row;
+         justify-content: flex-start;
+         position: relative;
+         width: 90%;
+         margin: 0 auto;
+         
+         .welcome-img {
+            height: 80vh;
+            width: 90%;
+         }
+         .welcome-txt {
+            width: auto;
+            margin: 0 0 0 -100px;
+            padding: 50px 50px 100px;
+
+            
+            h2 {
+               margin: 50px 0;
+               font-size: 45px;
+               line-height: 50px;
+            }
+         }
+      }
+   }
+}
