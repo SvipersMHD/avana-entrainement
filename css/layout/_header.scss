@@ -44,18 +44,13 @@ header {
             .hero-btn {
                display: inline-block;
                border: 1px solid white;
-               padding: 10px 10px;
                margin-top: 25px;
 
                   span {
+                     padding: 10px 10px;
                      color: white;
                      font-size: 30px;
-                     animation-name: arrow;
-                     animation-duration: 1s;
-                     animation-timing-function: linear;
-                     animation-iteration-count: infinite;
-                     animation-delay: .5s;
-                     animation: 2s ease-in-out  infinite 1s running arrow;
+                     animation: 2s cubic-bezier(.8, .5, .2, 1.4)  infinite .3s running arrow;
                   }
             }
       }
@@ -65,7 +60,11 @@ header {
       transform: translateY(0);
    }
    10% {
-      transform: translateY(50px);
+      transform: translateY(100px);
+      opacity: 0.2;
+   }
+   11% {
+      transform: translateY(150px);
       opacity: 0;
    }
    30% {
