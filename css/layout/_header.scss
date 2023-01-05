@@ -13,9 +13,6 @@ header {
       z-index: -1;
    }
 }
-header nav a {
-   display: none;
-}
 .nav-contenu {
    height: 100%;
    display: flex;
@@ -24,7 +21,7 @@ header nav a {
    color: white;
    width: 80%;
    margin: 0 auto;
-   padding: 20px 0;
+   padding: 50px 0;
 
       nav {
          display: flex;
@@ -33,9 +30,16 @@ header nav a {
       }
       .titre-btn {
          font-family: 'Montserrat', sans-serif;
+         margin-bottom: 50px;
 
             h1 {
                font-weight: 400;
+               font-size: 50px;
+               line-height: 60px;
+
+               span {
+                  display: block;
+               }
             }
             .hero-btn {
                display: inline-block;
@@ -46,12 +50,40 @@ header nav a {
                   span {
                      color: white;
                      font-size: 30px;
+                     animation-name: arrow;
+                     animation-duration: 1s;
+                     animation-timing-function: linear;
+                     animation-iteration-count: infinite;
+                     animation-delay: 1s;
                   }
             }
       }
 }
+@keyframes arrow {
+    0%   {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    75% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    95% {
+      transform: translateY(0);
+    }
+    100% {
+      
+      opacity: 1;
+    }
+}
 
 @media screen and (min-width:765px) {
+   .burger {
+      display: none;
+   }
    .nav-contenu {
       width: 90%;
    }
