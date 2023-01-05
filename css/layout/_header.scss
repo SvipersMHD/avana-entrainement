@@ -45,6 +45,7 @@ header {
                display: inline-block;
                border: 1px solid white;
                margin-top: 25px;
+               animation: 2s cubic-bezier(.8, .5, .2, 1.4)  infinite .3s running box;
 
                   span {
                      padding: 10px 10px;
@@ -54,6 +55,18 @@ header {
                   }
             }
       }
+}
+@keyframes box {
+   0% {
+      border-bottom: 0;
+   }
+   50% {
+      border-bottom: 1px solid white;
+      border-top: 0;
+   }
+   80% {
+      border-top: 1px solid white;
+   }
 }
 @keyframes arrow {
    0%   {
