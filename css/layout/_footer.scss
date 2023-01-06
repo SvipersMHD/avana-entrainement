@@ -1,0 +1,50 @@
+footer {
+    text-align: center;
+    margin: 100px;
+    
+    img {
+        margin-bottom: 40px;
+    }
+    nav{
+        margin-bottom: 40px;
+
+        a{
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $color-gray;
+            font-family: $ff;
+            margin-right: 25px;
+            font-size: 18px;
+            transition: $transi;
+
+            &:nth-of-type(4) {
+                margin-right: 0;
+            }
+            &:hover {
+                color: $bg-red;
+            }
+        } 
+    }
+    .social {
+        margin-bottom: 40px;
+
+        a {
+            color: white;
+            background-color: $color-gray;
+            margin-right: 25px;
+            font-size: 25px;
+            padding: 15px;
+            border-radius: 9999px;
+            transition: $transi;
+
+            &:hover {
+                color: white;
+                background-color: $bg-red;
+            }
+        }
+    }
+    small {
+        color: $color-gray;
+    }
+    
+}

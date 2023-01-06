@@ -1,0 +1,88 @@
+.about {
+
+    .about-txt {
+        width: 49%;
+        padding: 70px;
+        background-color: $bg-red;
+        color: white;
+        font-family: $ff;
+        line-height: 30px;
+    }
+}
+.about-container {
+    width: 60%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .portrait {
+        margin-bottom: 100px;
+        height: 40vh;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+
+        &:nth-of-type(1) {
+            background: url(../../img/about-image-1.jpg) no-repeat center/cover;
+            overflow: hidden;
+        }
+        &:nth-of-type(2) {
+            background: url(../../img/about-image-2.jpg) no-repeat center/cover;
+        }
+        &:nth-of-type(3) {
+            background: url(../../img/about-image-3.jpg) no-repeat center/contain;
+        }
+
+        &::after {
+            content: "";
+            background-color: #fb535376;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+            transition: $transi;
+        }
+        &:hover::after {
+            opacity: 1;
+        }
+        &:hover .portrait-txt {
+            transform: translateY(0);
+            transition: $transi;
+        }
+        &:hover {
+            background-size: cover;      
+        }
+    }
+}
+.portrait-txt {
+    background-color: $bg-red;
+    padding: 30px 50px;
+    z-index: 20;
+    position: absolute;
+    transform: translateY(120px);
+    transition: $transi;
+
+    
+    span {
+        color: white;
+        line-height: 30px;
+        background: $bg-red;
+        display: block;
+        text-align: center;
+        font-family: $ff;
+        position: relative;
+        z-index: 20;
+
+        &:nth-of-type(2) {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 12px;
+        }
+    }
+}
+

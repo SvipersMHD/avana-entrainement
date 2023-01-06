@@ -1,0 +1,92 @@
+.blog-cadre {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover .blog-cadre-txt  {
+        background-color: $bg-red;
+        color: white;
+    }
+    &:hover .blog-cadre-img::after {
+        opacity: 1;
+    }
+
+    .blog-cadre-img {
+        background: url(../../img/blog-1.jpg) no-repeat center/cover;
+        height: 50vh;
+        width: 100%;
+        position: relative;
+        
+        .blog-cadre-date {
+            font-size: 25px;
+            text-align: center;
+            position: absolute;
+            padding: 30px 15px;
+            background: $bg-red;
+            color: white;
+            font-family: $ff;
+            z-index: 20;
+
+            span {
+                display: block;
+                font-size: 30px;
+                font-weight: 900;
+            } 
+        }
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.358);
+            position: absolute;
+            opacity: 0;
+            transition: $transi;
+        }
+    }
+    .blog-cadre-txt {
+        font-weight: bold;
+        font-family: $ff;
+        text-align: left;
+        font-size: 22px;
+        padding: 20px;
+        transition: $transi;
+
+    }
+}
+
+.blog-container {
+    width: 60%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .blog-cadre {
+        width: 49%;
+        margin-bottom: 25px;
+    }
+}
+
+.blog-container {
+    
+    .blog-cadre:nth-of-type(1) .blog-cadre-img {
+        background: url(../../img/blog-2.jpg) no-repeat center/cover;
+    }
+    .blog-cadre:nth-of-type(2) .blog-cadre-img {
+        background: url(../../img/blog-3.jpg) no-repeat center/cover;
+    }
+    .blog-cadre:nth-of-type(3) .blog-cadre-img {
+        background: url(../../img/blog-4.jpg) no-repeat center/cover;
+    }
+    .blog-cadre:nth-of-type(4) .blog-cadre-img {
+        background: url(../../img/blog-5.jpg) no-repeat center/cover;
+    }
+    .blog-cadre:nth-of-type(5) .blog-cadre-img {
+        background: url(../../img/blog-2.jpg) no-repeat center/cover;
+    }
+}
+
+
+
