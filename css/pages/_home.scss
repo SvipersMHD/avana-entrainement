@@ -1,6 +1,55 @@
+.work-container {
+    margin: 0 auto;
+    padding-bottom: 50px;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .col-left, .col-right {
+        width: 49%;
+    }
+}
+.a-work-cadre {
+    text-decoration: none;
+    width: 100%;
+}
+.col-left {
+    .a-work-cadre:nth-of-type(2) {
+        .work-cadre {
+            background: url(../../img/image-5.jpg) no-repeat center/cover;
+            height: 35vh;
+        }
+    }
+    .a-work-cadre:nth-of-type(3) {
+        .work-cadre {
+            background: url(../../img/image-3.jpg) no-repeat center/cover;
+        }
+    }
+}
+.col-right {
+    .a-work-cadre:nth-of-type(1) {
+        .work-cadre {
+            background: url(../../img/image-3.jpg) no-repeat center/cover;
+            height: 35vh;
+        }
+    }
+    .a-work-cadre:nth-of-type(2) {
+        .work-cadre {
+            background: url(../../img/image-2.jpg) no-repeat center/cover;
+        }
+    }
+    .a-work-cadre:nth-of-type(3) {
+        .work-cadre {
+            background: url(../../img/image-5.jpg) no-repeat center/cover;
+            height: 40vh;
+        }
+    }
+}
 .work-cadre {
     background: url(../../img/image-1.jpg) no-repeat center/cover;
-    width: 49%;
+    width: 100%;
     height: 50vh;
     margin-bottom: 20px;
     display: flex;
@@ -9,11 +58,11 @@
     align-items: center;
     transition: $transi;
     position: relative;
-
+    
     &::before {
-        content: "";
-        width: 0%;
-        height: 0%;
+        content: "project for thonik, design studio based in amsterdam";
+        width: 0;
+        height: 0;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -21,19 +70,44 @@
         outline:  1px solid white;
         outline-offset: -15px;
         z-index: 1;
-        opacity: 0;
         transition: $transi;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        font-family: $ff;
+        font-size: 0;
+        text-transform: uppercase;
+    }
+    &:nth-of-type(2)::before {
+        content: "gallerie anatome based in paris";
+    }
+    &:nth-of-type(3)::before {
+        content: "over 40,000 customers use our themes to power their";
+    }
+    &:nth-of-type(4)::before {
+        content: "project for thonik, design studio based in amsterdam";
+    }
+    &:nth-of-type(5)::before {
+        content: "project for thonik, design studio based in amsterdam";
+    }
+    &:nth-of-type(6)::before {
+        content: "project for thonik, design studio based in amsterdam";
     }
     &::after {
         content: "";
         background-color: #fb5353be;
         width: 100%;
         height: 100%;
-        position: absolute;
         opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
         transition: $transi;
     }
-
+    
     h2 {
         color: white;
         font-family: $ff;
@@ -45,51 +119,18 @@
         z-index: 1;
         text-shadow: 0 0 1px black;
     }
-    span {
-        height: 0%;
-        text-align: center;
-        opacity: 0;
-        text-transform: uppercase;
-        color: white;
-        font-family: $ff;
-        font-size: 12px;
-        transition: $transi;
-        z-index: 1;
-    }
-    &:hover span, &:hover::after, &:hover::before  {
-        opacity: 1;
+    &:hover::after, &:hover::before  {
         width: 100%;
         height: 100%;
+        font-size: 14px;
+        opacity: 1;
     }
     &:hover h2 {
-        transform: translateY(-20px);
+        transform: translateY(-50px);
     }
 }
-.work-container {
-    margin: 0 auto;
-    padding-bottom: 50px;
-    width: 60%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-
-    .work-cadre:nth-of-type(1) {
-        background: url(../../img/image-2.jpg) no-repeat center/cover;
-    } 
-    .work-cadre:nth-of-type(2) {
-        background: url(../../img/image-3.jpg) no-repeat center/cover;
-    } 
-    .work-cadre:nth-of-type(3) {
-        background: url(../../img/image-4.jpg) no-repeat center/cover;
-    } 
-    .work-cadre:nth-of-type(4) {
-        background: url(../../img/image-5.jpg) no-repeat center/cover;
-    } 
-    .work-cadre:nth-of-type(5) {
-        background: url(../../img/image-1.jpg) no-repeat center/cover;
-    }
-    .work-cadre:nth-of-type(6) {
-        background: url(../../img/image-4.jpg) no-repeat center/cover;
+.bloc-titre {
+    .span-titre::before {
+        content: "personal brand identity";
     }
 }
