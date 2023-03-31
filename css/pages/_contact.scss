@@ -20,7 +20,11 @@
     } 
 }
 .bloc-titre {
-    
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
     .titre-container {
         margin-bottom: 100px;
     }

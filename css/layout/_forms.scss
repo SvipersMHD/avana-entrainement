@@ -1,0 +1,47 @@
+.contact-container {
+    width: 60%;
+    padding: 50px 0;
+    margin: 0 auto;
+}
+
+form {
+    font-family: $ff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+
+    .name_mail {
+        display: flex;
+        width: 100%;
+        flex-wrap: nowrap;
+        gap: 20px;
+        padding: 30px 0;
+
+        div {
+            width: 100%;
+
+            label {
+                margin: 15px 0;
+            }
+        }
+    }
+
+    input, textarea {
+        width: 100%;
+        margin: 15px 0;
+        padding: 10px;
+        border: 1px solid $bg-red;
+    }
+    textarea {
+        min-width: 100%;
+        outline: none;
+    }
+    .submitbtn {
+        margin: 30px auto;
+        width: 30%;
+        border-radius: 999px;
+        border: 1px solid $bg-red;
+        padding: 10px;
+    }
+}
